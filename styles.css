@@ -1,18 +1,72 @@
+*{ 
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Maven Pro', sans-serif;
+    
+  } 
 
-body {
-    background-color: rgb(212, 249, 237);
-    color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    text-align: center;
+  body {
+    background-color: rgb(215, 230,251);
+    display: flex;
+
+  }
+
+   /*page container left*/
+.container1 {
+    margin: 50px;
 }
-.center .color {
-    text-align: center;
-    background-color: rgb(213, 174, 183);
-    font-size: 24px;
-    color: black;
+
+   /*main title*/
+.main-title{
+    text-transform: uppercase;
 }
-.full {
-    height:200px;
-    width: 200px;
+   /*main paragraph*/
+   .main-paragraph{
+    padding: 15px;
+   }
+
+   /*second paragraph*/
+   .paragraph-info{
+    padding: 15px;
+   }
+
+   .odin-recipes{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+   }
+
+   /*container-links-images*/
+.container-links-images{
+    padding-top: 30px;
+}
+
+   /*links*/
+.links {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    gap: 110px;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(215, 230, 251);
+    background: #11d11e ;
+    font-size: 19px;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 4px;
+    
+}
+   /*images */  
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+img{
+    border-radius: 10px;
 }

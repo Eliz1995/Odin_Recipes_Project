@@ -1,34 +1,252 @@
-<h1> Strognoff Recipe</h1>
-<br>
-<img src="images/Brazilian-Stroganoff-.jpg" alt="Brazilian Strognoff" height="200" width="200">
-<h2> Description </h2>
-<p> That is a classic Strogonoff recipe. <br> The <b>brazilian</b> classic recipe !!! </p>
-<h3> <u>Ingredients</u> </h3>
-<ul> <li>02 boneless, skinless, chicken breasts (cut into very small pieces) </li>
-    <li> 2 tablespoon butter </li>
-    <li> 1 tablespoon olive oil </li>
-    <li> 03 garlic cloves (minced)</li>
-    <li> ½ onion (diced) </li>
-    <li> 03 tablespoon ketchup </li>
-    <li> 01 tablespoon mustard </li>
-    <li> 01 cup heavy cream (or one can of table cream) </li>
-    <li> salt to taste </li>
-    <li> 1 4oz can sliced mushrooms (optional)</li>
-    <li> ¼ cup tomato sauce (optional) </li>
-</ul>
-<h3> <u> Steps </u> </h3>
-<ol>
-    <li> Sprinkle salt over the chicken and set aside.</li>
-    <li> In a large skillet, melt 1 tablespoon of butter over medium-high heat and add the olive oil; wait until it's hot and 
-        add chicken in a single layer. Don't disturb it until it starts to sear. Push it all to one side when pieces get some color 
-        and add 1 tablespoon of butter, onion, and garlic to the empty side. Saute onion and garlic until onion is translucent..</li>    
-    <li> Add heavy cream, ketchup, mustard, soy sauce, and canned mushrooms (if using). Mix everything..</li>
-    <li> Check if the chicken is done; if it's not, lower the heat, cover the pan, and, let it cook for a bit longer 
-        (until no longer pink inside, or thermometer registers 165ºF or 73˚C)</li>
-    <li> Once the chicken is cooked but still soft and moist (don't over-cook it, or it will be hard and dry), turn off the heat and try it.
-         Correct salt if necessary, and if you like it more acidic, add ¼ cup of tomato sauce..</li>
-    <li> Enjoy it over rice, along with some potato sticks (Batata Palha).</li>
-    </ol>
-    <h2> ENJOY</h2>
-    <br>
-    <h3> Check more recipes <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/index.html" > here </a> </h3>
+<body> 
+  <style> 
+  
+    *{ 
+      margin: 0;
+      box-sizing: border-box;
+      font-family:'Maven Pro', sans-serif;
+      
+    } 
+  
+    body {
+      background-color: rgb(215, 230,251);
+      display: flex;
+  
+    }
+    
+    /*left side*/
+    .container {
+      margin: 50px;
+      font-size: 18px;
+      padding: 30px;
+      flex: 1.4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+  
+    /* title*/
+    .title {
+      padding: 30px;
+    }
+  
+    /* main image*/
+    .main-image {
+      padding: 30px;
+      border: 2px solid black;
+    }
+  
+    .title-image {
+      display: flex;
+    }
+  
+    figure{
+      padding: 60 20px;
+    }
+  
+    /*description*/
+    .main-image p {
+      padding: 20px;
+    }
+  
+    /*ingredients*/
+    .ingredients {
+        margin: 28px;
+        padding: 100px 28px 40px;
+      }
+  
+      .ingredients h3{
+        text-transform:uppercase ;
+        color: #019604;
+        padding-bottom: 25px;
+      }
+  
+      ul {
+        list-style: none;
+        
+      }
+  
+      ul li{
+        margin: 0 0 24px 1.3em;
+      }
+  
+      ul li:before{
+        content: '\2022';
+        margin: 20px 10px;
+        color: #3312eb;  
+    }
+  
+  
+    /*steps*/
+      .steps {
+        padding: 0px 48px;
+        margin: 28px;
+        flex-wrap: wrap;
+        flex-basis:content;
+        
+      }
+  
+      .steps h3{
+        text-transform:uppercase ;
+        color: #019604;
+        padding-bottom: 25px;
+        
+      }
+  
+      ol{
+        list-style: none;
+        
+      }
+  
+      ol li::before{
+        content: counter(li) ".";
+        color: #3312eb;
+        font-family: 'maven pro';
+      }
+  
+      ol li {
+        counter-increment: li;
+        margin: 0 0 24px 1.3em;
+      }
+      
+    /*footer*/
+    .footer{
+      padding-top: 50px ;
+    }
+  
+    .footer h2{
+      margin: 0 0 24px 2.9em;
+      border-bottom: double #019604 5px;
+    }
+  
+  
+    /*left side*/
+    /*icons*/
+    .icons{
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 30px;
+      padding-top: 90px;
+      padding-left: 0;
+      
+    }
+  
+    .icon-container{
+      display: flex;
+      gap: 20px;
+      border-bottom: solid 1px #3312eb;
+    }
+  
+    /*footer right side*/
+    .footer-right-side{
+      margin: 50 0 24px 0;
+      text-transform:uppercase ;
+      border-bottom: double #019604 5px;
+    }
+  
+    a{
+      text-decoration: none;
+    }
+
+    /*mini recipes links*/
+  .mini-recipes-links{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  
+  
+  </style>
+  
+  <div class="container">
+      <!-- Title-->
+    <div class="title-image">
+     <div class="title"> 
+      <h1> Brazilian <br> Strognoff </h1>
+      <figure>
+        <img src="images/flag-icon.jpg" alt="little brazilian flag icon" height="50" width="100">
+      </figure>
+     </div>
+    <!-- Main Image-->
+     <div class="main-image"> 
+      <img src="images/Brazilian-Stroganoff-.jpg" alt="Strognoff picture" height="350" width="350">
+      <p> That is a classic strognoff recipe.<br> 
+          The <span style="color:green"> bra </span> <span style="color:blue"> zil </span> <span style="color:rgb(177, 177, 61)"> ian </span> recipe !!! </p>
+     </div>
+    </div> 
+    <!--ingredients-->
+    
+    <div class="ingredients">
+     <h3> Ingredients </h3>
+     <ul> 
+      <li>02 boneless, skinless, chicken breasts (cut into very small pieces) </li>
+      <li> 2 tablespoon butter </li>
+      <li> 1 tablespoon olive oil </li>
+      <li> 03 garlic cloves (minced)</li>
+      <li> ½ onion (diced) </li>
+      <li> 03 tablespoon ketchup </li>
+      <li> 01 tablespoon mustard </li>
+      <li> 01 cup heavy cream (or one can of table cream) </li>
+      <li> salt to taste </li>
+      <li> 1 4oz can sliced mushrooms (optional)</li>
+      <li> ¼ cup tomato sauce (optional) </li>
+     </ul>
+    </div>
+    <!--steps-->
+    <div class="steps"> 
+     <h3> Steps </h3>
+     <ol>
+      <li> Sprinkle salt over the chicken and set aside.</li>
+    <li> In a large skillet, melt 1 tablespoon of butter over <br>medium-high heat and add the olive oil; wait until it's <br>hot and 
+        add chicken in a single layer. Don't disturb it <br>until it starts to sear. Push it all to one side when <br>pieces get some color 
+        and add 1 tablespoon of <br>butter, onion, and garlic to the empty side. Saute<br> onion and garlic until onion is translucent..</li>    
+    <li> Add heavy cream, ketchup, mustard, soy sauce, <br>and canned mushrooms (if using). Mix everything..</li>
+    <li> Check if the chicken is done; if it's not, lower the <br>heat, cover the pan, and, let it cook for a bit longer <br>
+        (until no longer pink inside, or thermometer registers<br> 165ºF or 73˚C)</li>
+    <li> Once the chicken is cooked but still soft and moist <br>(don't over-cook it, or it will be hard and dry), turn off <br>the heat and try it.
+         Correct salt if necessary, and if<br> you like it more acidic, add ¼ cup of tomato sauce..</li>
+    <li> Enjoy it over rice, along with some potato sticks<br> (Batata Palha).</li>
+     </ol>
+    </div>
+   <!--footer-->
+    <div class="footer">
+      <h2> ENJOY</h2>
+    </div>
+  </div> 
+   <!-- right side icons-->
+   <div class="icons"> 
+    <div class="icon-container"> 
+     <img src="images/difficulty.jpg" alt="difficulty-icon" height="30px" width="30px">
+      <p> Difficulty: </p> <p> easy</p>
+    </div>
+    <div class="icon-container"> 
+     <img src="images/prep.jpg" alt="prep-time-icon" height="30px" width="30px">
+      <p> Prep. time: </p> <p> 20 min</p>
+    </div>
+    <div class="icon-container"> 
+     <img src="images/serving.jpg" alt="servings-icon" height="30px" width="30px">
+      <p> Servings: </p> <p> 8 portions</p>
+    </div>
+    <div class="icon-container"> 
+     <img src="images/tiime.jpg" alt="cook-time-icon" height="30px" width="30px">
+      <p> Cook time: </p> <p> 25 min</p>
+    </div>
+    <!--footer right side-->
+    <div class="footer-right-side"> 
+      <h3> <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/index.html" > Recipes </a>  you might also like </h3>
+    </div>
+    <!--min recipes icon-->
+    <div class="mini-recipes-links">
+      <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/recipes/lasagna.html">
+        <img  src="images/homemade-lasagna-recipe-10-scaled.jpg"
+        width="80" height="80">
+      <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/recipes/feijoada.html">
+        <img  src="images/saborosa-receita-de-feijoada.jpg"
+        width="80" height="80">  
+    </div>
+   </div> 
+  </body>  
+  

@@ -1,10 +1,193 @@
-<h1> Lasagna recipe </h1>
-<br>
-<img src="images/food-g85cad4651_1280.jpg" alt="Lasagna picture" height="200" width="200">
-<h2> Description </h2>
-<p> That is a classic Lasagna recipe. <br> The <b>brazilian</b> classic recipe !!! </p>
-<h3> <u>Ingredients</u> </h3>
-<ul> <li>500 g or 01 pound of Lasagna pasta (of your choice) </li>
+<body> 
+<style> 
+
+  *{ 
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Maven Pro', sans-serif;
+    
+  } 
+
+  body {
+    background-color: rgb(215, 230,251);
+    display: flex;
+
+  }
+  
+  /*left side*/
+  .container {
+    margin: 50px;
+    font-size: 18px;
+    padding: 30px;
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  /* title*/
+  .title {
+    padding: 30px;
+  }
+
+  /* main image*/
+  .main-image {
+    padding: 30px;
+    border: 2px  black;
+  }
+
+  .title-image {
+    display: flex;
+  }
+
+  figure{
+    padding: 60 20px;
+  }
+
+  img{
+    border-radius: 5px;
+  }
+
+  /*description*/
+  .main-image p {
+    padding: 20px;
+  }
+
+  /*ingredients*/
+  .ingredients {
+      margin: 28px;
+      padding: 100px 28px 40px;
+    }
+
+    .ingredients h3{
+      text-transform:uppercase ;
+      color: #019604;
+      padding-bottom: 25px;
+    }
+
+    ul {
+      list-style: none;
+      
+    }
+
+    ul li{
+      margin: 0 0 24px 1.3em;
+    }
+
+    ul li:before{
+      content: '\2022';
+      margin: 20px 10px;
+      color: #3312eb;  
+  }
+
+
+  /*steps*/
+    .steps {
+      padding: 0px 48px;
+      margin: 28px;
+      flex-wrap: wrap;
+      flex-basis:content;
+      
+    }
+
+    .steps h3{
+      text-transform:uppercase ;
+      color: #019604;
+      padding-bottom: 25px;
+      
+    }
+
+    ol{
+      list-style: none;
+      
+    }
+
+    ol li::before{
+      content: counter(li) ".";
+      color: #3312eb;
+      font-family: 'maven pro';
+    }
+
+    ol li {
+      counter-increment: li;
+      margin: 0 0 24px 1.3em;
+    }
+    
+  /*footer*/
+  .footer{
+    padding-top: 50px ;
+  }
+
+  .footer h2{
+    margin: 0 0 24px 2.9em;
+    border-bottom: double #019604 5px;
+  }
+
+
+  /*left side*/
+  /*icons*/
+  .icons{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 90px;
+    padding-left: 0;
+    
+  }
+
+  .icon-container{
+    display: flex;
+    gap: 20px;
+    border-bottom: solid 1px #3312eb;
+  }
+
+  /*footer right side*/
+  .footer-right-side{
+    margin: 50 0 24px 0;
+    text-transform:uppercase ;
+    border-bottom: double #019604 5px;
+    padding-left: 0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  /*mini recipes links*/
+  .mini-recipes-links{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+
+
+</style>
+
+<div class="container">
+    <!-- Title-->
+  <div class="title-image">
+   <div class="title"> 
+    <h1> Brazilian <br> Lasagna </h1>
+    <figure>
+      <img src="images/flag-icon.jpg" alt="little brazilian flag icon" height="50" width="100">
+    </figure>
+   </div>
+  <!-- Main Image-->
+   <div class="main-image"> 
+    <img src="images/food-g85cad4651_1280.jpg" alt="Lasagna picture" height="350" width="350">
+    <p> That is a classic Lasagna recipe.<br> 
+        The <span style="color:green"> bra </span> <span style="color:blue"> zil </span> <span style="color:rgb(177, 177, 61)"> ian </span> recipe !!! </p>
+   </div>
+  </div> 
+  <!--ingredients-->
+  
+  <div class="ingredients">
+   <h3> Ingredients </h3>
+   <ul> 
+    <li>500 g or 01 pound of Lasagna pasta (of your choice) </li>
     <li> 500 g or 01 pound of ground beef </li>
     <li> 02 cans of creme de leite Nestle </li>
     <li> 03 spoons of butter</li>
@@ -17,21 +200,59 @@
     <li> 03 spoons of oil </li>
     <li> 03 crushed garlic </li>
     <li> 01 package of grated cheese</li>
-</ul>
-<h3> <u> Steps </u> </h3>
-<ol>
-    <li> Cook the pasta according to the manufacturer's instructions, 
-        pour it into a refractory with ice water to prevent sticking and set aside.</li>
-    <li> Sauté the garlic, onion, ground beef, tomato sauce, let it cook for 3 minutes and set aside.</li>    
-    <li> Melt the butter, add the 3 tablespoons of wheat flour and stir.</li>
+   </ul>
+  </div>
+  <!--steps-->
+  <div class="steps"> 
+   <h3> Steps </h3>
+   <ol>
+    <li> Cook the pasta according to the manufacturer's <br>instructions,
+        pour it into a refractory with ice water<br> to prevent sticking and set aside.</li>
+    <li> Sauté the garlic, onion, ground beef, tomato <br>sauce,let it cook for 3 minutes and set aside.</li>    
+    <li> Melt the butter, add the 3 tablespoons of wheat flour <br>and stir.</li>
     <li> Pour the milk little by little and keep stirring.</li>
-    <li> Lastly, add the cream, stir for 1 minute and turn off the heat.</li>
-    <li> Pour one part of the bolognese sauce into a refractory, half the pasta, half the ham, 
-        half the mozzarella, all the white sauce and the rest of the pasta.</li>
+    <li> Lastly, add the cream, stir for 1 minute and turn off <br>the heat.</li>
+    <li> Pour one part of the bolognese sauce into a<br> refractory, half the pasta, half the ham, 
+        half the <br>>mozzarella, all the white sauce and the rest of the<br> pasta.</li>
     <li> Repeat the layers to the edge of the container.</li>
-    <li> Finish with the grated cheese and bake in a high oven (220°C or 428˚F), preheated, for about 20 minutes.</li>
-    </ol>
+    <li> Finish with the grated cheese and bake in a high oven <br>(220°C or 428˚F), preheated, for about 20 minutes.</li>
+   </ol>
+  </div>
+ <!--footer-->
+  <div class="footer">
     <h2> ENJOY</h2>
-    <br>
-    <h3> Check more recipes <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/index.html" > here </a> </h3>
-
+  </div>
+</div> 
+ <!-- right side icons-->
+ <div class="icons"> 
+  <div class="icon-container"> 
+   <img src="images/difficulty.jpg" alt="difficulty-icon" height="30px" width="30px">
+    <p> Difficulty: </p> <p> easy</p>
+  </div>
+  <div class="icon-container"> 
+   <img src="images/prep.jpg" alt="prep-time-icon" height="30px" width="30px">
+    <p> Prep. time: </p> <p> 30 min </p>
+  </div>
+  <div class="icon-container"> 
+   <img src="images/serving.jpg" alt="servings-icon" height="30px" width="30px">
+    <p> Servings: </p> <p> 8 portions</p>
+  </div>
+  <div class="icon-container"> 
+   <img src="images/tiime.jpg" alt="cook-time-icon" height="30px" width="30px">
+    <p> Cook time: </p> <p> 25 min</p>
+  </div>
+  <!--footer right side-->
+  <div class="footer-right-side"> 
+    <h3> <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/index.html" > Recipes </a>  you might also like </h3>
+  </div>
+   <!--mini recipes links-->
+   <div class="mini-recipes-links">
+    <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/recipes/feijoada.html">
+      <img  src="images/saborosa-receita-de-feijoada.jpg"
+      width="80" height="80">
+    <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/recipes/strognoff.html">
+      <img  src="images/Brazilian-Stroganoff-.jpg"
+      width="80" height="80">  
+  </div>
+ </div> 
+</body>  

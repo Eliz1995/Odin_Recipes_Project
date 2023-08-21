@@ -1,33 +1,249 @@
-<h1> Lasagna recipe </h1>
-<br>
-<img src="images/saborosa-receita-de-feijoada.jpg" alt="Feijoada picture" height="200" width="200">
-<h2> Description </h2>
-<p> That is a classic Feijoada recipe. <br> The <b>brazilian</b> classic recipe !!! </p>
-<h3> <u>Ingredients</u> </h3>
-<ul> <li> 500g of black beans </li>
-    <li> 2 pepperoni sausages (cut into cubes) </li>
-    <li> 02 cans of creme de leite Nestle </li>
-    <li> 500g of dried meat </li>
-    <li> 1 big onion </li>
-    <li> 3 cloves of garlic </li>
-    <li> Black pepper </li>
-    <li> Green pepper flakes </li>
-    <li> Coriander (chopped) </li>
-    <li> Parsley</li>
-    <li> smell-green0 </li>
-    <li> Rosemary </li>
-</ul>
-<h3> <u> Steps </u> </h3>
-<ol>
-    <li> Soak the beans for at least one hour. Boil the dried meat twice, to desalt it..</li>
-    <li> In the pressure cooker, place the onion, and the pepperoni sausage, so that the onion browns with the oil released by them.
-         Once boiled, add the salted meat. Add the garlic and sauté everything until the meat get more color. Add the washed beans,
-        the large green pepper flakes and a pinch of black pepper.</li>    
-    <li> When the beans are cooked, collect the green pepper flakes from the pan and add the parsley, parsley, 
-        cilantro and powdered bean seasoning.</li>
-    <li> If necessary, which it almost never is, correct the salt by adding whatever amount you think is necessary. 
-        While the beans are under pressure, prepare the farofa and cabbage.</li>
-    </ol>
-    <h2> ENJOY</h2>
-    <br>
-    <h3> Check more recipes <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/index.html" > here </a> </h3>
+<body> 
+<style>
+    *{ 
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Maven Pro', sans-serif;
+    
+  } 
+
+  body {
+    background-color: rgb(215, 230,251);
+    display: flex;
+
+  }
+  
+  /*left side*/
+  .right-container {
+    margin: 50px;
+    font-size: 18px;
+    padding: 30px;
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  /* title*/
+  .title {
+    padding: 30px;
+  }
+
+  /* main image*/
+  .main-image {
+    padding: 30px;
+    border: 2px solid black;
+  }
+
+  .title-image {
+    display: flex;
+  }
+
+  figure{
+    padding: 60 20px;
+  }
+
+  /*description*/
+  .main-image p {
+    padding: 20px;
+  }
+
+  /*ingredients*/
+  .ingredients {
+      margin: 28px;
+      padding: 100px 28px 40px;
+    }
+
+    .ingredients h3{
+      text-transform:uppercase ;
+      color: #019604;
+      padding-bottom: 25px;
+    }
+
+    ul {
+      list-style: none;
+      
+    }
+
+    ul li{
+      margin: 0 0 24px 1.3em;
+    }
+
+    ul li:before{
+      content: '\2022';
+      margin: 20px 10px;
+      color: #3312eb;  
+  }
+
+
+  /*steps*/
+    .steps {
+      padding: 0px 48px;
+      margin: 28px;
+      flex-wrap: wrap;
+      flex-basis:content;
+      
+    }
+
+    .steps h3{
+      text-transform:uppercase ;
+      color: #019604;
+      padding-bottom: 25px;
+      
+    }
+
+    ol{
+      list-style: none;
+      
+    }
+
+    ol li::before{
+      content: counter(li) ".";
+      color: #3312eb;
+      font-family: 'maven pro';
+    }
+
+    ol li {
+      counter-increment: li;
+      margin: 0 0 24px 1.3em;
+    }
+    
+  /*footer*/
+  .footer{
+    padding-top: 50px ;
+  }
+
+  .footer h2{
+    margin: 0 0 24px 2.9em;
+    border-bottom: double #019604 5px;
+  }
+
+
+  /*right side*/
+  /*icons*/
+  .icons{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 90px;
+    padding-left: 0;
+    
+  }
+
+  .icon-container{
+    display: flex;
+    gap: 20px;
+    border-bottom: solid 1px #3312eb;
+  }
+
+  /*footer right side*/
+  .footer-right-side{
+    margin: 50 0 24px 0;
+    text-transform:uppercase ;
+    border-bottom: double #019604 5px;
+    padding-left: 0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  /*mini recipes links*/
+  .mini-recipes-links{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+
+</style>
+
+</style>
+    <!--right container-->
+    <div class="right-container">
+        <div class="title-image">
+            <div class="title">
+              <h1> Brazilian <br> Feijoada<br> Recipe </h1>
+              <figure>
+                <img src="images/flag-icon.jpg" alt="brazilian little flag icon" height="50" width="100">
+              </figure>
+            </div>  
+    <!--main image-->
+            <div class="main-image">
+                <img src="images/saborosa-receita-de-feijoada.jpg" alt="feijoada image" height="300" width="300">
+                <p> That is a classic Feijoada recipe.<br> 
+                    The <span style="color:green"> bra </span> <span style="color:blue"> zil </span> <span style="color:rgb(177, 177, 61)"> ian </span> recipe !!! </p>
+            </div>  
+        </div>
+    <!--ingredients-->
+        <div class="ingredients">
+            <h3> Ingredients</h3>
+            <ul>
+              <li>500g of black beans</li>
+              <li> 2 pepperoni sausages (cut into cubes)</li>
+              <li>02 cans of creme de leite Nestle</li>
+              <li>500g of dried meat</li>
+              <li>1 big onion</li>
+              <li>3 cloves of garlic</li>
+              <li>Black pepper</li>
+              <li>Green pepper flakes</li>
+              <li>Coriander (chopped)</li>
+              <li>Parsley</li>
+              <li>smell-green</li>
+              <li> Rosemary</li>
+            </ul>
+        </div>
+    <!--steps-->
+        <div class="steps">
+            <h3> Steps</h3>
+            <ol>
+                <li>Soak the beans for at least one hour. Boil<br> the dried meat twice, to desalt it..</li>
+                <li>In the pressure cooker, place the onion,<br> and the pepperoni sausage, so that the <br>onion browns with the oil released by them.<br>
+                    Once boiled, add the salted meat. Add the<br> garlic and sauté everything until the meat get <br>more color. Add the washed beans,
+                   the large <br>green pepper flakes and a pinch of black<br> pepper.</li>
+                <li>When the beans are cooked, collect the <br> green pepper flakes from the pan and add <br>the parsley, parsley, 
+                    cilantro and powdered <br>bean seasoning.</li>
+                <li>If necessary, which it almost never is,<br> correct the salt by adding whatever amount <br>you think is necessary. 
+                    While the beans are <br>under pressure, prepare the farofa and <br>cabbage.</li>
+            </ol>
+        </div>  
+    <!--footer--> 
+        <div class="footer">
+            <h2> ENJOY</h2>
+        </div>
+    </div>
+    <!-- right side icons-->
+ <div class="icons"> 
+    <div class="icon-container"> 
+     <img src="images/difficulty.jpg" alt="difficulty-icon" height="30px" width="30px">
+      <p> Difficulty: </p> <p> easy</p>
+    </div>
+    <div class="icon-container"> 
+     <img src="images/prep.jpg" alt="prep-time-icon" height="30px" width="30px">
+      <p> Prep. time: </p> <p> 15 min </p>
+    </div>
+    <div class="icon-container"> 
+     <img src="images/serving.jpg" alt="servings-icon" height="30px" width="30px">
+      <p> Servings: </p> <p> 10 portions</p>
+    </div>
+    <div class="icon-container"> 
+     <img src="images/tiime.jpg" alt="cook-time-icon" height="30px" width="30px">
+      <p> Cook time: </p> <p> 2:30 min</p>
+    </div>
+    <!--footer right side-->
+    <div class="footer-right-side"> 
+      <h3> <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/index.html" > Recipes </a>  you might also like </h3>
+    </div>
+    <!--min recipes icon-->
+    <div class="mini-recipes-links">
+      <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/recipes/lasagna.html">
+        <img  src="images/homemade-lasagna-recipe-10-scaled.jpg"
+        width="80" height="80">
+      <a href="file:///Users/elisangelasantos/Desktop/repos/odin-recipes/recipes/strognoff.html">
+        <img  src="images/Brazilian-Stroganoff-.jpg"
+        width="80" height="80">  
+    </div>
+   </div> 
+  </body>  
